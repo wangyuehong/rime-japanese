@@ -63,12 +63,10 @@ punctuator:
   import_preset: default
 
 key_binder:
+  import_preset: default  # 从 default.yaml 继承
   bindings:
-    - {accept: "Control+Shift+1", select: .next, when: always}
-    - {accept: "Control+Shift+n", select: japanese, when: always}
-    - {accept: "Control+Shift+N", select: japanese, when: always}
-    - {accept: "Control+Shift+l", select: international, when: always}
-    - {accept: "Control+Shift+L", select: international, when: always}
+    - { when: composing, accept: Tab,       send: Right }
+    - { when: composing, accept: Shift+Tab, send: Left }
 
 recognizer:
   import_preset: default
